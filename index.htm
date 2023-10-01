@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: "Arial";
+            width: 640px;
+        }
+    </style>
+    <title>WinRAR Key File Generator</title>
+</head>
+
+<body>
+    <hr>
+    <h1>WinRAR Key File Generator</h1>
+    <hr>
+    <p style="text-align: justify;"><strong><i>WinRAR</i></strong> is a trialware file archiver utility for Windows, developed
+        by Eugene Roshal of
+        win.rar GmbH. WinRAR is not a free software. If you want to use it, you should go to <a
+            href="https://www.rarlab.com/">RARLAB</a> and order it. The Generator is only for personal research (such
+        as finite field arithmetic, elliptic curve cryptography) use. It's forbidden to use this for business
+        purpose. In case of infringement, please contact the author to
+        delete.</p>
+
+    <p style="text-align: justify;">
+        <br>
+        The generator is implemented purely in JavaScript and doesn't use any other libraries.
+        <br>
+        To generate the license please fill in the two blanks (<strong><i>Register Name</i> </strong>,
+        <strong><i>License Type</i> </strong>), click the <strong><i>Generate</i> </strong> button and wait for 2-15
+        seconds.
+        Then, save the <strong><i>License</i> </strong> in <strong><i>ANSI</i></strong> <strong><i>encoding
+                format</i></strong> as rarreg.key.
+        Finally, copy the license file to the installation directory of WinRAR.
+    </p>
+    <p>
+        <strong>N.B.:</strong>
+    <ul>
+        <li>Save the <strong><i>License</i> </strong> in <strong><i>ANSI</i></strong> <strong><i>encoding
+                    format</i> </strong>.</li>
+        <li>Please use <strong><i>ASCII</i></strong> characters (include Spaces and special characters like !@#$&*%:?) <strong><i>ONLY</i></strong>, otherwise registration may fail.</li>
+        <li>Please click the Generate button and wait for 2-15 seconds.</li>
+        <li>The First line of license file is "RAR registration data"</li>
+    </ul>
+    <strong>Some License Type:</strong>
+    <ul>
+        <li>Single PC usage license</li>
+        <li>Local Site License</li>
+        <li>Unlimited Company License</li>
+        <li>1000 PC usage license</li>
+    </ul>
+    </p>
+
+
+<hr>
+    <p>
+        Register Name: <br><input type="text" id="USERNAME" size="80">
+    </p>
+    <p>
+        License Type: <br><input type="text" id="LICENSETYPE" size="80">
+    </p>
+    <button type="button" id="but">Generate!</button>
+    <p>
+        License: <br><textarea type="text" id="KEY" rows="16" cols="72"> </textarea>
+    </p>
+
+    <script src="./src/KeyGen.js"></script>
+    <script>
+
+        but.onclick = function () {
+            let _a = USERNAME.value;
+            let _b = LICENSETYPE.value;
+            KEY.value = Winrar_KeyGen(_a, _b);
+        }
+    </script>
+
+<hr>
+<p ><a href=https://github.com/YJTSAI-17/JS-WinRAR-KeyGen>GitHub</a> 
+   <br>Created By Y.J. TSAI. &ensp;(E-Mail: yj.tsai@protonmail.com)</p>
+   <hr>
+</body>
+
+</html>
