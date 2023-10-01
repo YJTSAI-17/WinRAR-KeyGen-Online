@@ -1,4 +1,4 @@
-# **You Can Generate WinRAR License Online At [This Site](https://winrar-keygen.tsai.best)!
+# You Can Generate WinRAR License Online At [This Site](https://winrar-keygen.tsai.best)!
 <hr>
 
 # WinRAR Key File Generator In Pure JS
