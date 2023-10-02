@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>WinRAR Online Key Generator</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "WinRAR Key File Generator.";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> WinRAR Online Key Generator
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">WinRAR Key File Generator.</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#generator">Generator</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="README.HOW_DOES_IT_WORK/">How is "rarreg.key" generated?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="GF/">Arithmetic on the Galois Field GF(2<sup>n</sup>) and GF((2<sup>n</sup>)<sup>m</sup>).</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="EC/">Elliptic Curve Point Addition For y^2 + xy = x^3 + a x^2 + b.</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">WinRAR Online Key Generator</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">WinRAR Key File Generator.</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/YJTSAI-17/WinRAR-KeyGen-Online/edit/master/docs/index.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="winrar-key-file-generator">WinRAR Key File Generator.</h1>
+<hr>
+
+<h3 id="generator">Generator</h3>
+<p><strong>The introduction and usage are at the bottom of this page.</strong><br><br>
+Register Name: <br><input type="text" id="USERNAME" size="80"> <br>
+License Type: <br><input type="text" id="LICENSETYPE" size="80"> <br><br>
+<button type="button" id="but">Generate!</button> <br> <br>
+License: <br><textarea type="text" id="KEY" rows="16" cols="72"> </textarea></p>
+<script src="./src/KeyGen.js"></script>
+<script>
+
+but.onclick = function () {
+    let _a = USERNAME.value;
+    let _b = LICENSETYPE.value;
+    KEY.value = Winrar_KeyGen(_a, _b);
+    }
+</script>
+
+<hr>
+
+<h3 id="introduction">Introduction</h3>
+<p style="text-align: justify;"><strong><i>WinRAR</i></strong> is a trialware file archiver utility for Windows, developed by Eugene Roshal of win.rar GmbH. WinRAR is not a free software. If you want to use it, you should go to <a href="https://www.rarlab.com/">RARLAB</a> and order it. The generator is <strong><i>only</i></strong> for <strong><i>personal research</strong></i> (such as finite field arithmetic, elliptic curve cryptography) use and implemented purely in JavaScript and doesn't use any other libraries. This website <strong><i>only</i></strong> tell you how WinRAR license file "rarreg.key" is generated. It's <strong><i>forbidden</i></strong> to use this for business purpose. <br>
+</p>
+
+<p>If you want to know the algorithm, you can see <a href="README.HOW_DOES_IT_WORK/">here</a> (Thanks For <a href="https://github.com/bitcookies">bitcookies</a>). But this artical does not describe the arithmetic on the Galois Field GF(2<sup>n</sup>) and GF((2<sup>n</sup>)<sup>m</sup>), and I describe the arithmetic <a href="GF/">here</a>. This artical also doesn't describe the arithmetic of Elliptic Curve, and I describe the arithmetic <a href="EC/">here</a>.</p>
+<h3 id="usage">Usage</h3>
+<p><strong>To generate the license please</strong>: <br></p>
+<ol>
+<li>Fill in the two blanks (<strong>Register Name</strong> , <strong>License Type</strong> ),</li>
+<li>Click the <strong>Generate</strong> button and wait for 2-15 seconds,</li>
+<li>Save the License in <strong>ANSI encoding format</strong> as rarreg.key,</li>
+<li>Copy the file to the installation directory of WinRAR.</li>
+</ol>
+<p><strong>N.B.</strong>: <br></p>
+<ol>
+<li>Save the License in <strong>ANSI</strong> encoding format,</li>
+<li>Please use ASCII characters <strong>ONLY</strong>, otherwise registration may fail,</li>
+<li>Please click the Generate button and wait for 2-15 seconds,</li>
+<li>The First line of license files is "RAR registration data".</li>
+</ol>
+<p><strong>Some License Type</strong>:<br></p>
+<ol>
+<li>Single PC usage license</li>
+<li>Local Site License</li>
+<li>Unlimited Company License</li>
+<li>1000 PC usage license</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="README.HOW_DOES_IT_WORK/" class="btn btn-neutral float-right" title="How is "rarreg.key" generated?">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/YJTSAI-17/WinRAR-KeyGen-Online" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+      <span><a href="README.HOW_DOES_IT_WORK/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2023-10-02 18:24:57.827822+00:00
+-->
