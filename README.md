@@ -8,7 +8,7 @@
 
 ## 2. How to generate?
 
-The generator is implemented purely in JavaScript and doesn't use any other libraries. So you can visit [this website](https://winrar-keygen.tsai.best) to generate online, or use the function ***Winrar_KeyGen(USER,LIC)*** in KeyGen.js.
+The generator is implemented purely in JavaScript and doesn't use any other libraries. So you can visit [this website](https://winrar-keygen.tsai.best) to generate online, or use the function ***Winrar_KeyGen(USER,LIC)*** in [KeyGen.js](./src/KeyGen.js).
 
 ## 3. How does it work?
 
