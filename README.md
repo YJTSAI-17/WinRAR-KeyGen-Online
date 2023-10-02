@@ -1,4 +1,4 @@
-<font size=10>**You Can Generate WinRAR License Online At [This Site]()!**</font>
+# You Can Generate WinRAR License Online At [This Site](https://winrar-keygen.tsai.best)!
 <hr>
 
 # WinRAR Key File Generator In Pure JS
@@ -8,7 +8,21 @@
 
 ## 2. How to generate?
 
-The generator is implemented purely in JavaScript and doesn't use any other libraries. So you can visit this website to generate online, or use the function ***Winrar_KeyGen(USER,LIC)*** in KeyGen.js.
+The generator is implemented purely in JavaScript and doesn't use any other libraries. So you can visit [this website](https://winrar-keygen.tsai.best) to generate online, or use the function ***Winrar_KeyGen(USER,LIC)*** in [KeyGen.js](./src/KeyGen.js).
 
-## 3. License
+## 3. How does it work?
+
+### 1.Arithmetic on the Galois Field GF(2^15) & GF((2^15)^17)
+
+Please see [this site](https://winrar-keygen.tsai.best/GF_Arithmetic.htm).
+
+### 2. Elliptic Curve on the Galois Field GF((2^15)^17)
+
+Please see [this site](https://winrar-keygen.tsai.best/EC.htm).
+
+### 3. Generate License File
+
+Please see [this site](https://winrar-keygen.tsai.best/Generate.htm).
+
+## 4. License
 The code is available under the MIT license.
